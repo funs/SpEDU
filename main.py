@@ -4,24 +4,20 @@ import kivy
 kivy.require('1.10.0')
 
 from kivy.uix.floatlayout import FloatLayout
+from kivy.uix.boxlayout import BoxLayout
 from kivy.app import App
 from kivy.properties import ObjectProperty, StringProperty
 
 
 class SpeduWidget(FloatLayout):
 
-    label_wid = ObjectProperty()
-    info = StringProperty()
-
-    def do_action(self):
-        self.label_wid.text = 'My label after button press'
-        self.info = 'New info text'
+    pass
 
 
 class SpeduApp(App):
 
     def build(self):
-        return SpeduWidget(info='Hello world')
+        return SpeduWidget()
 
 
 if __name__ == '__main__':

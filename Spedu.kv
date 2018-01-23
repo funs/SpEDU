@@ -1,16 +1,28 @@
 #:kivy 1.10
 
 <SpeduWidget>:
-    label_wid: my_custom_label
 
     BoxLayout:
         orientation: 'vertical'
         padding: 20
 
-        Button:
-            text: 'My controller info is: ' + root.info
-            on_press: root.do_action()
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 20
+            Label:
+                id: subject_label
+                text: 'My label before button press 1'
+            Label:
+                id: subject_label2
+                text: 'My label before button press 2'
 
-        Label:
-            id: my_custom_label
-            text: 'My label before button press'
+        BoxLayout:
+            orientation: 'vertical'
+            padding: 20
+
+            Button:
+                text: 'My controller info is: '
+
+            Label:
+                id: subject_label3
+                text: 'My label before button press 3'
